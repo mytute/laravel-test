@@ -8,3 +8,12 @@ web request > laravel > route file looks at the request
 
 go to routes/web.php and views/ folder
 create "/pizzas" route and view call "pizzas"
+
+create "/pizzas-string" route and return string and see return type of brower.
+
+create "/pizzas-json" route and return following json and see return type of brower
+Content-Type :application/json under Response Headers.
+
+```php
+return ['name'=> 'veg pizzas', 'base'=> 'classic'];
+```
