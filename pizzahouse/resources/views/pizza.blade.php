@@ -15,8 +15,11 @@
 </head>
 
 <body class="">
-    <p>{{$type}}</p>
-    <p>{{$base}}</p>
+    @if($price > 15)
+    <p>this pizza is expensive</p>
+    @elseif($price < 5) <p>this pizza is cheap</p>
+        @else <p>this pizza is normally priced</p>
+        @endif
 
 </body>
 
