@@ -18,9 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/pizzahouse', function () {
-    return view('pizza');
-});
-
-Route::get('/pizza-json', function () {
-    return ['name' => 'veg pizzas', 'base' => 'classic'];
+    // passing number convert in to string on browser
+    $pizza = ['type' => 'chicken', 'base' => 'cheese'];
+    return view('pizza', $pizza);
 });

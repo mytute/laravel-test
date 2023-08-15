@@ -1,19 +1,9 @@
-# Laravel 6 Tutorial for Beginners #3 - Laravel Basics (Routes, Views)
+# Laravel 6 Tutorial for Beginners #4 - Passing Data to Views
 
-link[https://youtu.be/xevIxUQ1SH4]
+link[https://youtu.be/ub2PdzJqFXg]
 
-web request > laravel > route file looks at the request
-
-> get or process any data needed > compile a view to return.
-
-go to routes/web.php and views/ folder
-create "/pizzas" route and view call "pizzas"
-
-create "/pizzas-string" route and return string and see return type of brower.
-
-create "/pizzas-json" route and return following json and see return type of brower
-Content-Type :application/json under Response Headers.
+inside 'pizzahouse' route pass following values to 'pizza' view and display in browser
 
 ```php
-return ['name'=> 'veg pizzas', 'base'=> 'classic'];
+return view('pizza', ['type'=>'chicken', 'base'=> 'cheese']);
 ```
