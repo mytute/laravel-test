@@ -1,17 +1,10 @@
-# Laravel 6 Tutorial for Beginners #2 - Installing Laravel
+# Laravel 6 Tutorial for Beginners #3 - Laravel Basics (Routes, Views)
 
-link[https://youtu.be/E74_WZpjeKA]
+link[https://youtu.be/xevIxUQ1SH4]
 
-check composer version
-$ omposer -v
+web request > laravel > route file looks at the request
 
-install laravel globally to use in any directory (do not use sudo)
-$ composer global require laravel/installer
+> get or process any data needed > compile a view to return.
 
-create laravel new project call "pizzahouse"
-$ laravel new pizzahouse
-
-open new created project on preview server
-$ cd pizzahouse
-$ php artisan serve
-in brower open http://localhost:8000/ to see laravel default page.
+go to routes/web.php and views/ folder
+create "/pizzas" route and view call "pizzas"
