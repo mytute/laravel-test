@@ -15,11 +15,17 @@
 </head>
 
 <body class="">
-    @if($price > 15)
-    <p>this pizza is expensive</p>
-    @elseif($price < 5) <p>this pizza is cheap</p>
-        @else <p>this pizza is normally priced</p>
-        @endif
+    @for($i=0; $i < 5; $i++ ) <p>this is for loop</p>
+        @endfor
+
+        <hr />
+
+        @for($i=0; $i < count($pizzas); $i++ ) <p>{{ $pizzas[$i]['type'] }}</p>
+            @endfor
+
+            @foreach($pizzas as $pizza )
+            <p>{{ $pizza['type'] }}</p>
+            @endforeach
 
 </body>
 

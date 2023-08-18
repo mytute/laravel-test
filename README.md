@@ -1,16 +1,19 @@
-# Laravel 6 Tutorial for Beginners #5 - Blade Basics
+# Laravel 6 Tutorial for Beginners #6 - Blade Loops
 
 link[https://youtu.be/ub2PdzJqFXg]
 
-pass price value to the 'pizza' view template
+1.  in the 'pizza' view template write a loop 0-5 and print p tag 5 time.
+    hint : @for @endfor
+
+2.  pass following array data to view template and loop it
 
 ```php
-return view('pizza', ['price'=>10]);
+$pizzas = [
+    ['type' => 'hawaiian', 'base' => 'cheesy crust'],
+    ['type' => 'volcano', 'base' => 'gralic crust'],
+    ['type' => 'veg supreme', 'base' => 'thin & crispy'],
+]
 ```
 
-and if price higher than 15 then print "this pizza is expensive"
-if price less than 5 then print "this pizza is cheap"  
-else print "this pizza is normally priced"
-
-hint : you can use follwoing syntax
-@if @elseif @else @endif
+3. and show above examle with foreach loop
+   hintL @foreach @endforeach $loop-> index

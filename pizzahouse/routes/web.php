@@ -18,7 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/pizzahouse', function () {
-    // passing number convert in to string on browser
-    $pizza = ['price' => 10];
-    return view('pizza', $pizza);
+    $pizzas = [
+        ['type' => 'hawaiian', 'base' => 'cheesy crust'],
+        ['type' => 'volcano', 'base' => 'gralic crust'],
+        ['type' => 'veg supreme', 'base' => 'thin & crispy'],
+    ];
+
+    return view('pizza', ['pizzas' => $pizzas]);
 });
