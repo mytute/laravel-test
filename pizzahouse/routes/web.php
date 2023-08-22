@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\FallbackController;
+use App\Http\Controllers\PizzarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +29,14 @@ Route::get('/pizzahouse', function () {
 
     return view('pizza', ['pizzas' => $pizzas]);
 });
+
+// Route::get('/qpizz/{id}', PizzarController@index);
+Route::get('/qpizz/{id}', [PizzarController::class, 'index']);
+
+
+Route::prefix('blog')->group(function () {
+    Route::get('/', [BlogController::class, 'index']);
+    Route::get('/{id}', [BlogController::class, 'show']);
+});
+
+Route::fallback(FallbackController::class);
